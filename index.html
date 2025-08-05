@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EXMADE HUB V2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Theme Customizer -->
+  <div class="theme-switcher">
+    <select id="themeSelector">
+      <option value="purple">Purple</option>
+      <option value="dark">Dark</option>
+      <option value="light">White</option>
+    </select>
+  </div>
+
+  <!-- Top Bar with Profile -->
+  <div class="topbar">
+    <img src="assets/profile.png" class="pfp" />
+    <h1>EXMADE HUB</h1>
+  </div>
+
+  <!-- Main Menu -->
+  <div class="menu" id="mainMenu">
+    <button onclick="goTo('methods')">📜 Methods</button>
+    <a href="https://discord.gg/WA2bUWCZJD" target="_blank">
+      <button>💬 Discord</button>
+    </a>
+  </div>
+
+  <!-- Methods Page -->
+  <div class="menu hidden" id="methodsMenu">
+    <button class="back" onclick="goBack()">← Back</button>
+    <a href="https://logged.tg/tools/refresher" target="_blank">
+      <button>🔁 Cookie Refresher</button>
+    </a>
+    <a href="https://www.logged.tg/auth/exmade" target="_blank">
+      <button>🧠 Beam No.1</button>
+    </a>
+    <a href="https://immortal.st/dashboard" target="_blank">
+      <button>💀 Beam No.2 (BEST)</button>
+    </a>
+    <a href="https://dsprs.vercel.app/hyperlink" target="_blank">
+      <button>🔗 Hyperlink Gen</button>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
