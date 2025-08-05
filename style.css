@@ -1,0 +1,127 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: #1c1b2d;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.pfp {
+  width: 48px;
+  height: 48px;
+  border-radius: 25%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+/* Menus */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #6f42c1;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+  background: #8e5cff;
+  transform: scale(1.03);
+}
+
+/* Back Button */
+.back {
+  background: #2e2e3f;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Theme Switcher */
+.theme-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.theme-switcher select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #2c2c3f;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* Theme: Light */
+body.light {
+  background: #f5f5f5;
+  color: #111;
+}
+
+body.light .topbar h1,
+body.light .menu button {
+  color: #111;
+}
+
+body.light button {
+  background: #ffffff;
+  border: 1px solid #ccc;
+}
+
+body.light .theme-switcher select {
+  background: #ddd;
+  color: black;
+}
+
+/* Theme: Dark */
+body.dark {
+  background: #111111;
+  color: white;
+}
+
+body.dark button {
+  background: #333;
+  color: white;
+}
+
+body.dark .theme-switcher select {
+  background: #222;
+  color: white;
+}
+
+/* Theme: Purple (Default) */
+/* Already handled above */
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
